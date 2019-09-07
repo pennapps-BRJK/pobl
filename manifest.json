@@ -1,5 +1,6 @@
 {
     "name" : "pobl", 
+    "description" : "This extension notifies the user when a YouTube video changes in the background and automatically queries song lyrics for music playing in the current YouTube tab.",
     "version" : "1.0", 
     "manifest_version" : 2,
     "content_scripts": [
@@ -7,5 +8,12 @@
             "matches": ["*://www.youtube.com/watch?v=*"],
             "js": ["content.js"]
         }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "Click to see title and lyrics"
+    },
+    "permissions": [
+        "webNavigation"
     ]
 }
