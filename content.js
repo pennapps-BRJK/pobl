@@ -1,1 +1,1 @@
-alert('Default')
+chrome.runtime.sendMessage("test");
