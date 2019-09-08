@@ -1,7 +1,8 @@
 {
     "name" : "pobl", 
-    "description" : "This extension notifies the user when a YouTube video changes in the background and automatically queries song lyrics for music playing in the current YouTube tab.",
+    "description" : "This extension lets you see lyrics", 
     "version" : "1.0", 
+    "key" : "damhjjgdioidhdabcjechjfjicmpemkb",
     "manifest_version" : 2,
     "content_scripts": [
         {
@@ -14,6 +15,16 @@
         "default_title": "Click to see title and lyrics"
     },
     "permissions": [
+        "identity", 
         "webNavigation"
-    ]
+    ], 
+    "oauth2": {
+        "client_id": "228436345986-eigj7fi6ntv8uree4542atndin07v06m.apps.googleusercontent.com",
+        "scopes": ["https://www.googleapis.com/auth/youtube.force-ssl", 
+            "https://www.googleapis.com/auth/youtube.readonly", 
+            "https://www.googleapis.com/auth/youtube", 
+            "https://www.googleapis.com/auth/youtubepartner"
+        ]
+    }
 }
+
