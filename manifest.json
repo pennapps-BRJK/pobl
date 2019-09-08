@@ -5,7 +5,7 @@
     "manifest_version" : 2,
     "content_scripts": [
         {
-            "matches": ["*://www.youtube.com/watch?v=*"],
+            "matches": ["*://*.youtube.com/watch?v=*"],
             "js": ["content.js"]
         }
     ],
@@ -19,6 +19,6 @@
         "default_title": "Click to see title and lyrics"
     },
     "permissions": [
-        "notifications"
+        "notifications", "webNavigation"
     ]
 }
